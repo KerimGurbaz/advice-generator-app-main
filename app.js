@@ -4,7 +4,10 @@ const par = document.querySelector("p");
 
 const dice = document.querySelector(".dice");
 
+dice.addEventListener("click", ()=>{
+    myAdvice()
 
+});
 
 
 const  myAdvice = async ()=>{
@@ -21,13 +24,8 @@ if(!response.ok){
 }
 
 const data = await response.json();
-
-dice.addEventListener("click", ()=>{
-    span.innerHTML =`ADVICE # ${data.slip.id}`
-    par.innerHTML = `${data.slip.advice}`
-    myAdvice();
-
-})
+span.innerHTML =`ADVICE # ${data.slip.id}`
+par.innerHTML = `${data.slip.advice}`
 
     
     } catch (error) {console.log(error)
