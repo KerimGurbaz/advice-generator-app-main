@@ -56,3 +56,17 @@ p {
 .dice img {
   padding: 1.2rem;
 }
+
+@media (max-width: 600px) {
+  p {
+    color: red;
+    font-size: 1rem;
+  }
+  .container {
+    width: 20rem;
+    font-size: 1rem;
+  }
+  .main img {
+    width: 16rem;
+  }
+}
