@@ -24,7 +24,6 @@ body {
   /* margin-top: 35vh; */
   border-radius: 1rem;
   position: relative;
-  border: 2px solid red;
 }
 main {
   display: flex;
