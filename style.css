@@ -59,7 +59,6 @@ p {
 
 @media (max-width: 600px) {
   p {
-    color: red;
     font-size: 1rem;
   }
   .container {
