@@ -59,8 +59,12 @@ p {
 
 .dice:hover {
   box-shadow: 0 0 3rem hsl(150, 100%, 66%);
+  transform: scale(135%);
 }
 
+.dice:hover img {
+  animation: rotate 2s linear infinite;
+}
 .zoom {
   animation: zoom 1s linear;
 }
@@ -68,7 +72,6 @@ p {
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
-    filter: drop-shadow(0.5rem 0.5rem 0.8rem --blue) invert(75%);
   }
 }
 @keyframes zoom {
