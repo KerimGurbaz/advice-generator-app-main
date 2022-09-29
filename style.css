@@ -70,11 +70,14 @@ p {
 }
 
 @keyframes rotate {
-  100% {
+  from {
+  }
+  to {
     transform: rotate(360deg);
   }
 }
-@keyframes zoom {
+
+/* @keyframes zoom {
   0% {
     transform: scale(100%);
   }
@@ -84,7 +87,7 @@ p {
   100% {
     transform: scale(100%);
   }
-}
+} */
 
 @media (max-width: 600px) {
   p {
