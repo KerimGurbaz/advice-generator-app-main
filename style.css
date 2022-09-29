@@ -57,6 +57,32 @@ p {
   padding: 1.2rem;
 }
 
+.dice:hover {
+  box-shadow: 0 0 3rem hsl(150, 100%, 66%);
+}
+
+.zoom {
+  animation: zoom 1s linear;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0.5rem 0.5rem 0.8rem --blue) invert(75%);
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(100%);
+  }
+  25% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
 @media (max-width: 600px) {
   p {
     font-size: 1rem;

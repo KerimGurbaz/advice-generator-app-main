@@ -3,9 +3,19 @@ const span = document.querySelector("#span");
 const par = document.querySelector("p");
 
 const dice = document.querySelector(".dice");
+const body = document.querySelector("body");
+const container = document.querySelector(".container");
+
+
+let color ;
+
+
+
+
 
 dice.addEventListener("click", ()=>{
-    myAdvice()
+    myAdvice();
+    randomColor();
 
 });
 
@@ -15,6 +25,8 @@ const  myAdvice = async ()=>{
     const url ="https://api.adviceslip.com/advice";
 
     try {
+        container.classList.remove("zoom");
+
         const response =await fetch(url);
 
 if(!response.ok){
@@ -25,7 +37,10 @@ if(!response.ok){
 
 const data = await response.json();
 span.innerHTML =`ADVICE # ${data.slip.id}`
-par.innerHTML = `${data.slip.advice}`
+par.innerHTML = `${data.slip.advice}`;
+body.style.backgroundColor = `${color}`
+container.classList.add("zoom");
+
 
     
     } catch (error) {console.log(error)
@@ -40,4 +55,17 @@ myAdvice();
 const hata = ()=>{
     document.querySelector(".container").innerHTML = `hatali giris`
 };
+
+
+const randomColor = () =>{
+    let letters = "0123456789ABCDEF".split("");
+color = `#` ;
+    for (let i = 0 ; i<6; i++){
+        color += letters[Math.floor(Math.random() * 16)]
+      
+    }
+return color;
+
+}
+
 
